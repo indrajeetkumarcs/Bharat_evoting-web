@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OVS-Register</title>
+    <link rel="stylesheet" href="../css/stylesheet.css">
+</head>
+<body>
+    <center>
+    <style>
+        #address{
+            width: 23%;
+        }
+        #imgpart{
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            width: 23%;   
+        }
+        #role{
+            border-radius: 5px;
+            padding: 5px;
+            width: 23%;
+        }
+        #role select{
+            border-radius: 5px;
+            padding: 10px;
+            border: 2px solid blue;
+        }
+    </style>
+
+    <h1>Bharat e-Vote Portal</h1>
+    <hr>
+    <h2>Registeration Page</h2>
+    <form action="../api/register.php" method="post" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Enter your Name">
+        <input type="number" name="mobile" placeholder="Mobile Number"><br><br>
+        <input type="password" name="password" placeholder="Enter your password">
+        <input type="password" name="cpassword" placeholder="Confirm password"><br><br>
+        <input id="address" type="text" name="address" placeholder="provide your Address"><br><br>
+        
+            <div id="imgpart">
+            Upload Image:<input type="file" name="photo">
+            </div>
+            <br><br>
+        <div id="role">
+            Select Your Role: <select name="role">
+            <option value="1">Voter</option>
+            <option value="2">Group</option>
+            </select>
+        </div>
+        <br><br>    
+        
+        <button 
+        style="padding: 5px;
+               font-size: 15px;
+               background-color: #3498db;
+               color: white;
+               border-radius: 5px;">
+        Register</button><br><br>
+        Already User? <a href="../index.html">Login Here</a>
+        
+
+    </form>
+    </center>
+</body>
+</html>
